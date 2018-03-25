@@ -1,0 +1,78 @@
+
+<Html>
+	<Head> 
+		<title>我喜欢你</title>
+    </Head> 
+
+	<Body bgColor="#ffffff"> 
+		<!--将以下代码加入HTML的<Body></Body>之间--> 
+		<style> 
+			.shakeimage { position:relative } 
+
+		</style> 
+		<img src="D:\工程&项目\前端工程\寒假作业：我的大一\JMU.JPG" style="align:center" class="shakeimage" onMouseover="init(this);rattleimage()" onMouseout="stoprattle(this)"> 
+		<!--
+		http://imglf2.nosdn.127.net/img/RGhkeUZqK3lyQ0tqc1lOcjQ0bE01NjVkdkpJZUwwQTdEVTdneUZZTGNXQ1YraVRuQ21CTHJBPT0.jpg?imageView&thumbnail=500x0&quality=96&stripmeta=0&type=jpg
+		-->
+		<script language="JavaScript1.2">
+			window.resizeTo(450,950);
+			window.moveTo(500,0);
+			var rector=3;
+			var stopit=0;
+			var a=1;
+			function init(which) { 
+				stopit=0;
+			shake=which;
+			shake.style.left=0;
+			shake.style.top=0;
+			} 
+
+			function rattleimage(){
+				if ((!document.all&&!document.getElementById)||stopit==1) return ;
+				if (a==1) { shake.style.top=parseInt(shake.style.top)+rector 
+				}
+				else if (a==2){ 
+					shake.style.left=parseInt(shake.style.left)+rector ;
+					} 
+					else if (a==3){ 
+						shake.style.top=parseInt(shake.style.top)-rector ;
+						} 
+						else { 
+						shake.style.left=parseInt(shake.style.left)-rector ;
+						}
+							if (a<4) a++;
+							else a=1;
+							setTimeout("rattleimage()",50) ;
+										} 
+
+			function stoprattle(which) {
+			stopit=1;
+			which.style.left=0;
+			which.style.top=0 ;
+			}
+		</script>
+	
+		<CENTER>
+			<FONT style="COLOR:#33FF00; FILTER: shadow(color=black); FONT-FAMILY: 华文彩云; FONT-SIZE: 30pt; LINE-HEIGHT: 150%; WIDTH: 100%">
+				<B>我爱你</B> 
+			</FONT>
+		</CENTER> 
+
+		<hr>
+
+		<style type="text/css"> 
+		.3dfont {
+			FILTER: glow(color=ffffff,strength=0) shadow(color=cccccc,direction:135); POSITION: relative; WIDTH: 100% 
+		}
+		</style>
+		<table border="0" width="100%"> 
+
+		<tr> 
+			<td width="100%" class="3dfont">
+		<font color=RED><CENTER> Tips:</font><br> 
+		<P align=left>
+		<MARQUEE>鼠标放在图片上，会有惊喜! 
+		</P>
+	</body> 
+
+</Html> 
